@@ -4,8 +4,6 @@ Student Performance Analysis and Prediction System using Python and Machine Lear
 
 ## Project Overview
 
-The **Student Performance Analysis and Prediction System** is a minor project developed as part of the AI/ML with Python Training Program at Interns Elite.
-
 The project uses Python and Machine Learning to analyze student academic performance, identify patterns in educational data, and predict expected examination scores based on selected academic and lifestyle-related factors.
 
 The system analyzes factors such as study hours, attendance, sleep hours, previous examination scores, tutoring sessions, and physical activity.
