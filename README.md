@@ -1,99 +1,227 @@
-# Student-Performance-Analysis-and-Prediction-System
-Student Performance Analysis and Prediction System using Python and Machine Learning. Analyzes academic factors, visualizes student performance patterns, and predicts examination scores using a regression model.
+# Student Performance Analysis and Prediction System
 
+A machine-learning-based student performance analysis project built using **Python, NumPy, Pandas, Matplotlib, Seaborn, and Scikit-learn**.
 
-## Project Overview
+The project analyses student-related academic and personal factors, explores patterns that may influence examination performance, and predicts final exam scores using a regression model. It is an educational machine-learning project intended to demonstrate data analysis, visualisation, preprocessing, and predictive modelling.
 
-The project uses Python and Machine Learning to analyze student academic performance, identify patterns in educational data, and predict expected examination scores based on selected academic and lifestyle-related factors.
+## Project and Internship Information
 
-The system analyzes factors such as study hours, attendance, sleep hours, previous examination scores, tutoring sessions, and physical activity.
+| Detail | Information |
+|---|---|
+| Project | Student Performance Analysis and Prediction System |
+| Student | Shubham Aher |
+| Internship Organization | InternsElite |
+| Internship Domain | AI/ML with Python |
+| Internship Duration | 3 months |
+| Academic Affiliation | Sanjivani University, Kopargaon |
+| Academic Year | 2025–2028 |
 
-## Project Objectives
+## Key Features
 
-- Load and analyze student performance data using Pandas and NumPy.
+- Inspect and analyse a student performance dataset.
 - Handle missing values and duplicate records.
-- Perform data cleaning and preprocessing.
-- Calculate descriptive statistics.
+- Perform data cleaning and preprocessing using Pandas and NumPy.
+- Calculate descriptive statistics to understand student performance.
 - Explore relationships between academic factors and examination scores.
-- Create visualizations using Matplotlib and Seaborn.
-- Develop a regression model to predict examination scores.
-- Evaluate model performance using MAE, RMSE, and R².
-- Generate predictions for sample student data.
+- Create visualisations using Matplotlib and Seaborn.
+- Analyse study hours, attendance, sleep, previous scores, and other student-related factors.
+- Train a Ridge Regression model to predict examination scores.
+- Apply feature scaling and median imputation through a machine-learning pipeline.
+- Use GridSearchCV for hyperparameter tuning.
+- Perform 5-fold cross-validation.
+- Evaluate the model using MAE, RMSE, and R².
+- Generate sample student performance predictions.
+- Save the trained model using Joblib.
 
-## Dataset Description
+## Technology Stack
 
-**Dataset name:** `Student Performance Factors.csv`
+- **Programming Language:** Python
+- **Data Analysis:** Pandas, NumPy
+- **Data Visualisation:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn
+- **Regression Algorithm:** Ridge Regression
+- **Model Persistence:** Joblib
+- **Development Environment:** Visual Studio Code
+- **Operating System:** Windows
 
-The dataset contains:
-- 6,607 records
-- 20 columns
+## Dataset
 
-It includes information about:
-- Hours studied
-- Attendance
-- Previous examination scores
-- Sleep hours
-- Tutoring sessions
-- Physical activity
-- Parental involvement
-- Access to resources
-- School type
-- Other student-related factors
+This project uses the **Student Performance Factors** dataset stored as:
+
+`Student Performance Factors.csv`
+
+The dataset contains **6,607 student records and 20 columns** describing academic, personal, family, and school-related factors.
+
+### Dataset Features
+
+Some important dataset columns include:
+
+- `Hours_Studied`
+- `Attendance`
+- `Parental_Involvement`
+- `Access_to_Resources`
+- `Extracurricular_Activities`
+- `Sleep_Hours`
+- `Previous_Scores`
+- `Motivation_Level`
+- `Internet_Access`
+- `Tutoring_Sessions`
+- `Family_Income`
+- `Teacher_Quality`
+- `School_Type`
+- `Peer_Influence`
+- `Physical_Activity`
+- `Learning_Disabilities`
+- `Parental_Education_Level`
+- `Distance_from_Home`
+- `Gender`
+- `Exam_Score`
 
 **Target variable:** `Exam_Score`
 
-**Dataset source:** Add the original dataset source or download URL here before publishing.
+### Data Preprocessing
 
-## Technologies and Libraries Used
+The dataset preprocessing includes:
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Joblib
-- Jupyter Notebook
-- VS Code
+- Checking and handling missing values.
+- Removing duplicate records.
+- Applying mode imputation to missing categorical values.
+- Preparing numerical features for machine learning.
+- Separating input features and the target variable.
 
-## Machine Learning Model
+The dataset contains missing values in `Teacher_Quality`, `Parental_Education_Level`, and `Distance_from_Home`.
 
-The project currently implements a **Ridge Regression** model using Scikit-learn.
+**Dataset source:** Add the original dataset download URL or provider attribution here before publishing the repository. The exact source URL has not been verified in the available project information.
 
-Ridge Regression is a regularized linear regression algorithm used to predict numerical values.
+## Project Structure
+
+```text
+Student-Performance-Analysis-and-Prediction-System/
+├── data/
+│   └── Student Performance Factors.csv
+├── notebooks/
+│   └── student_performance_analysis.ipynb
+├── src/
+│   ├── model.py
+│   └── student_performance_model.joblib
+├── outputs/
+│   ├── visualizations/
+│   │   ├── exam_score_distribution.png
+│   │   ├── average_score_by_parental_involvement.png
+│   │   ├── study_hours_vs_exam_score.png
+│   │   ├── numerical_correlation_heatmap.png
+│   │   ├── attendance_vs_exam_score.png
+│   │   ├── previous_scores_vs_exam_score.png
+│   │   └── exam_score_boxplot.png
+│   └── evaluation_results/
+│       ├── actual_vs_predicted_results.csv
+│       ├── descriptive_statistics.csv
+│       ├── model_comparison.csv
+│       ├── model_evaluation_metrics.csv
+│       ├── standalone_model_metrics.csv
+│       ├── standalone_predictions.csv
+│       └── sample_student_predictions.csv
+├── screenshots/
+├── README.md
+└── requirements.txt
+```
+
+*The structure above is a guide. Keep the filenames consistent with the actual files in your GitHub repository.*
+
+## Setup and Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/shubhamaher95/Student-Performance-Analysis-and-Prediction-System.git
+cd Student-Performance-Analysis-and-Prediction-System
+```
+
+### 2. Create and activate a virtual environment
+
+**Windows PowerShell:**
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, use Command Prompt:
+
+```cmd
+.venv\Scripts\activate.bat
+```
+
+### 3. Install dependencies
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### 4. Verify the dataset
+
+Make sure the dataset is available at:
+
+```text
+data/Student Performance Factors.csv
+```
+
+## Run the Project
+
+Run the following commands from the repository root after activating the virtual environment.
+
+### Run the analysis notebook
+
+Open the notebook inside the `notebooks/` directory using Jupyter Notebook or Visual Studio Code.
+
+### Run the machine-learning model
+
+```powershell
+python src/model.py
+```
+
+The model script performs preprocessing, hyperparameter tuning, model training, evaluation, and prediction generation.
+
+The trained model is saved as:
+
+```text
+src/student_performance_model.joblib
+```
+
+## Model Development and Evaluation
+
+The project uses **Ridge Regression**, a regularised linear regression algorithm, to predict student examination scores.
 
 ### Input Features
 
-1. Hours_Studied
-2. Attendance
-3. Sleep_Hours
-4. Previous_Scores
-5. Tutoring_Sessions
-6. Physical_Activity
+The model uses six numerical input features:
 
-### Target Variable
+1. `Hours_Studied`
+2. `Attendance`
+3. `Sleep_Hours`
+4. `Previous_Scores`
+5. `Tutoring_Sessions`
+6. `Physical_Activity`
 
-`Exam_Score`
+### Machine Learning Workflow
 
-### Model Workflow
+1. Load the student performance dataset.
+2. Select input features and the target variable.
+3. Split the dataset into training and testing sets.
+4. Handle missing numerical values using median imputation.
+5. Standardise numerical features using StandardScaler.
+6. Apply Ridge Regression.
+7. Perform hyperparameter tuning using GridSearchCV.
+8. Evaluate the model using a test dataset.
+9. Perform 5-fold cross-validation.
+10. Generate predictions and save evaluation results.
 
-1. Load the dataset.
-2. Remove duplicate records.
-3. Select input features and target variable.
-4. Split the dataset into training and testing sets (80:20).
-5. Handle missing values using median imputation.
-6. Apply feature scaling using StandardScaler.
-7. Train the Ridge Regression model.
-8. Perform five-fold cross-validation.
-9. Apply hyperparameter tuning using GridSearchCV.
-10. Generate predictions on unseen test data.
-11. Evaluate the model and save the trained model.
+The dataset is divided using an 80:20 training and testing split with `random_state=42`.
 
-**Note:** The project guidelines specify Linear Regression. The current implementation uses Ridge Regression, which is a regularized linear regression method.
+### Model Evaluation Results
 
-## Model Evaluation
-
-The model is evaluated using the following metrics:
+The following results were reported by the current model implementation:
 
 | Evaluation Metric | Result |
 |---|---:|
@@ -103,208 +231,99 @@ The model is evaluated using the following metrics:
 | Best Alpha | 0.010 |
 | Cross-Validation MAE | 1.327 |
 
-### Result Interpretation
+**Model interpretation:** The R² score of 0.642 indicates that the model explains approximately 64.2% of the variation in examination scores on the evaluated test data.
 
-- **MAE (1.266):** The average absolute difference between actual and predicted examination scores is approximately 1.266 points.
-- **RMSE (2.251):** Measures prediction error while giving greater weight to larger errors.
-- **R² Score (0.642):** The model explains approximately 64.2% of the variation in examination scores on the test dataset.
+The MAE of 1.266 indicates an average absolute prediction error of approximately 1.266 exam-score points.
 
-These results are based on the held-out test dataset and should not be interpreted as a guarantee of future student performance.
+*These are the reported results from the current Ridge Regression implementation. They should be regenerated if the dataset, features, preprocessing, or model configuration changes.*
 
-## Sample Prediction
-
-The trained model was tested using sample student information.
+### Sample Prediction
 
 Example input:
 
-- Hours Studied: 3
-- Attendance: 90
-- Sleep Hours: 8
-- Previous Scores: 75
-- Tutoring Sessions: 2
-- Physical Activity: 4
-
-**Predicted Examination Score: 64.69**
-
-Additional sample predictions:
-
-| Student | Predicted Score |
+| Feature | Value |
 |---|---:|
-| Student 1 | 58.72 |
-| Student 2 | 67.41 |
-| Student 3 | 63.63 |
+| Hours Studied | 3 |
+| Attendance | 90 |
+| Sleep Hours | 8 |
+| Previous Scores | 75 |
+| Tutoring Sessions | 2 |
+| Physical Activity | 4 |
 
-These are illustrative model predictions.
+**Predicted Exam Score: 64.69**
 
-## Project Folder Structure
+This is an illustrative prediction generated using the current model, not a guaranteed student result.
 
-```text
-Student_Performance_Analysis/
-│
-├── data/
-│   └── Student Performance Factors.csv
-│
-├── notebooks/
-│   └── Student_Performance_Analysis.ipynb
-│
-├── src/
-│   ├── model.py
-│   └── student_performance_model.joblib
-│
-├── outputs/
-│   ├── visualizations/
-│   └── evaluation_results/
-│
-├── screenshots/
-│
-├── Project_Report.pdf
-├── README.md
-└── requirements.txt
-```
+## Data Visualisations
 
-## Installation and Setup
+The project includes several visualisations to understand student performance patterns.
 
-### 1. Clone the Repository
+### Exam Score Distribution
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
+![Exam Score Distribution](outputs/visualizations/exam_score_distribution.png)
 
-### 2. Navigate to the Project Folder
+### Average Score by Parental Involvement
 
-```bash
-cd Student_Performance_Analysis
-```
+![Average Score by Parental Involvement](outputs/visualizations/average_score_by_parental_involvement.png)
 
-### 3. Create a Virtual Environment
+### Study Hours vs Exam Score
 
-```bash
-python -m venv .venv
-```
+![Study Hours vs Exam Score](outputs/visualizations/study_hours_vs_exam_score.png)
 
-### 4. Activate the Virtual Environment
+### Numerical Correlation Heatmap
 
-For Windows PowerShell:
+![Numerical Correlation Heatmap](outputs/visualizations/numerical_correlation_heatmap.png)
 
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
+### Attendance vs Exam Score
 
-### 5. Install Dependencies
+![Attendance vs Exam Score](outputs/visualizations/attendance_vs_exam_score.png)
 
-```bash
-pip install -r requirements.txt
-```
+### Previous Scores vs Exam Score
 
-## Requirements
+![Previous Scores vs Exam Score](outputs/visualizations/previous_scores_vs_exam_score.png)
 
-The following libraries are required:
+### Exam Score Box Plot
 
-```text
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-joblib
-jupyter
-```
+![Exam Score Box Plot](outputs/visualizations/exam_score_boxplot.png)
 
-## How to Run the Project
+*Check that each image filename matches the actual file in your repository. GitHub won't display images if their paths are wrong.*
 
-### Run the Jupyter Notebook
+## Important Limitations
 
-Open VS Code, select the project's Python virtual environment as the notebook kernel, and open:
+- Student examination performance depends on many factors that may not be included in the dataset.
+- The model uses only six selected numerical features for prediction.
+- Dataset quality and missing values can affect model performance.
+- The model learns statistical patterns from historical data; it does not establish causal relationships.
+- Predictions are estimates and should not be treated as guaranteed examination results.
+- Performance on the test dataset does not guarantee the same performance on new student data.
+- The model's results depend on the dataset and the selected features.
 
-```text
-notebooks/Student_Performance_Analysis.ipynb
-```
-
-Run the notebook cells sequentially to perform data analysis, generate visualizations, and test predictions.
-
-### Run the Machine Learning Model
-
-From the project root directory, execute:
-
-```powershell
-python src/model.py
-```
-
-The script trains the model, evaluates its performance, saves prediction results, and stores the trained model.
-
-## Output Files
-
-The project generates the following evaluation files:
-
-- `descriptive_statistics.csv`
-- `model_comparison.csv`
-- `model_evaluation_metrics.csv`
-- `actual_vs_predicted_results.csv`
-- `standalone_model_metrics.csv`
-- `standalone_predictions.csv`
-- `sample_student_predictions.csv`
-
-The trained model is saved as:
-
-```text
-src/student_performance_model.joblib
-```
-
-Visualizations are stored in:
-
-```text
-outputs/visualizations/
-```
-
-## Visualizations
-
-The project includes the following exploratory data analysis visualizations:
-
-- Examination score histogram
-- Bar chart of average scores by parental involvement
-- Study hours versus examination score scatter plot
-- Attendance versus examination score scatter plot
-- Previous scores versus examination score plot
-- Examination score box plot
-- Numerical correlation heatmap
-
-Screenshots of the visualizations and model outputs can be found in the `screenshots/` folder.
-
-## Limitations
-
-- The model uses a selected set of numerical features.
-- Predictions may differ from actual examination results.
-- The model's performance depends on the quality and representativeness of the dataset.
-- The optional pass/fail classification model has not been implemented.
-- The model identifies statistical patterns and does not establish cause-and-effect relationships.
+This project is an educational prediction prototype and should not be used as the sole basis for academic decisions.
 
 ## Future Improvements
 
-- Implement and compare a standard Linear Regression model.
-- Include additional relevant student features.
-- Compare multiple machine learning algorithms.
-- Implement an optional pass/fail classification model.
-- Develop a web-based interface for student score prediction.
-- Improve model performance using additional datasets and feature engineering.
-
-## Conclusion
-
-The Student Performance Analysis and Prediction System demonstrates how Python, data analysis, and machine learning can be applied to educational data.
-
-The project explores academic performance patterns, develops a regression-based prediction system, and evaluates its performance using standard regression metrics.
-
-It provides a practical demonstration of data preprocessing, exploratory data analysis, machine learning model development, and prediction.
+- Compare Ridge Regression with Linear Regression and other regression algorithms.
+- Add more relevant student performance features.
+- Improve feature engineering and data preprocessing.
+- Develop a student performance prediction web application.
+- Add pass/fail classification as an additional prediction task.
+- Improve model performance through further hyperparameter tuning.
+- Evaluate the model on additional student datasets.
+- Add interactive visualisations and a user-friendly interface.
 
 ## Author
 
 **Shubham Aher**
 
-Sanjivani University
+Internship Organization: **InternsElite**  
+Internship Domain: **AI/ML with Python**  
+Duration: **3 months**  
+Academic Affiliation: **Sanjivani University, Kopargaon**
 
-AI/ML with Python Training Program
+## Acknowledgements
 
-**Internship Organization:** Interns Elite
+I would like to acknowledge **InternsElite** for providing the internship opportunity and practical learning experience in Artificial Intelligence and Machine Learning with Python.
 
-**Academic Year:** 2025–2028
+## License
 
-**Internship Duration:** 3 Months
+No license has been specified for this repository yet. Add an appropriate open-source license only after confirming that you have the rights to license all included code, datasets, and other assets.
